@@ -1,25 +1,35 @@
 //
 //  ViewController.swift
-//  CollectionViewControllerProperty
-//
-//  Created by 齋藤緒 on 2016/06/17.
-//  Copyright © 2016年 TestOrganization. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var testNavBar: UINavigationBar!
+    @IBOutlet weak var testImageView: UIImageView!
+    
+    var testTitle:String!
+    var testImage:UIImage!
+    
+    
+    //最初からあるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //タイトルと画像を設定する。
+        testNavBar.topItem!.title = testTitle
+        testImageView.image = testImage
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    //ボタン押下時の呼び出しメソッド
+    @IBAction func pushButton(sender: UIBarButtonItem) {
+        
+        //モーダル表示されているビューコントローラーを解放する。
+        self.dismissViewControllerAnimated(true, completion:nil)
     }
-
-
+    
 }
-

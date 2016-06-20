@@ -48,7 +48,7 @@ class TestCollectionViewController: UICollectionViewController {
     
     //画面遷移実行前の呼び出しメソッド
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+
         //選択中のセルの画像を取得する。
         let index = collectionView?.indexPathsForSelectedItems()?.first
         let cell = collectionView?.cellForItemAtIndexPath(index!)
